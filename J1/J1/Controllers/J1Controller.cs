@@ -28,7 +28,9 @@ namespace J1.Controllers
         [Consumes("application/x-www-form-urlencoded")]
         public string Delivedroid([FromForm] int collisions, [FromForm] int deliveries)
         {
-            int score = (deliveries * 50) - (collisions * 10);
+            int noOfpackages = deliveries * 50;
+            int noOfObstacles = collisions * -10;
+            int score = noOfpackages + noOfObstacles;
 
             if (deliveries > collisions)
             {
