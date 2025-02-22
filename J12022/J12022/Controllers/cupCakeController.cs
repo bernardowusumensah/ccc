@@ -7,6 +7,8 @@ namespace J12022.Controllers
     [ApiController]
     public class cupCakeController : ControllerBase
     {
+        
+
         [HttpPost("calculate")]
         public IActionResult CalculateCupcakes([FromBody] CupcakeRequest request)
         {
