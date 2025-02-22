@@ -29,8 +29,8 @@ namespace J1.Controllers
         public string Delivedroid([FromForm] int collisions, [FromForm] int deliveries)
         {
             int noOfpackages = deliveries * 50;
-            int noOfObstacles = collisions * -10;
-            int score = noOfpackages + noOfObstacles;
+            int noOfObstacles = collisions * 10;
+            int score = noOfpackages - noOfObstacles;
 
             if (noOfpackages > noOfObstacles)
             {
